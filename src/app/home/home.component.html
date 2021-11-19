@@ -1,0 +1,50 @@
+
+
+
+<div class="m-5">
+    <h1 class="text-center"><img style="width: 350px;"src="assets/logo.png" alt=""></h1>
+    <h6 class="text-center text-muted"> Vous disposer de {{pokemons.length}} <i class="fa fa-check-circle"></i>pokemons !</h6>
+    <h1 class="text-center"><img class="text-center" *ngFor="let pokemon of pokemons" style="width:50px;" src="assets/pok.png" [title]="pokemon.name"></h1>
+  </div>
+  <section class="col-md-8 mx-auto">
+    <div class="row">
+  <div class="col-md-2 card" *ngFor="let pokemon of pokemons">
+      <a [routerLink]="['detail', pokemon.id]">
+        <img [src]="pokemon.picture" alt="" style="width: 150px;" >
+        <div class="card-body">
+            <p>Id: {{pokemon.id}}</p>
+            <p>Nom: {{pokemon.name}}</p>
+            <p>Type: {{pokemon.type}}</p>
+            <p>Vie: {{pokemon.life}}</p>
+            <p>Capturé le: {{pokemon.created | date:"dd/MM/yyyy"}}</p>
+        </div>
+      </a>
+  </div>
+    </div>
+  </section>
+
+
+  <!-- <div class="text-center">
+    <img src="assets/logo.png" style="width: 300px;" alt="">
+</div>>
+<section class="col-md-10 mx-auto">
+    <p class="text-muted text-center">Vous disposez de {{pokemons.length}}</p>
+    <p class="text-center"><img src="assets/pok.png" *ngFor="let pokemon of pokemons" style="width: 50px;" [title]="pokemon.name" alt=""></p>
+
+    <div class="row">
+        <div class="col-md-2 card " *ngFor="let pokemon of pokemons">
+            <div class="card-body">
+                <img [src]="pokemon.picture" style="width: 150px;" alt="">
+                <P>{{pokemon.id}}</P>
+                <p>{{pokemon.name}}</p>
+                <P>{{pokemon.type}}</P>
+                <P>{{pokemon.life}}</P>
+                <P>{{pokemon.created | date:"dd/MM/yy"}}</P>
+            </div>
+        </div>
+    </div>
+</section> -->
+  
+
+<!-- *ngFor="let pokemon of pokemons" : boucle for pour afficher tous les pokemon dans la varbiable pokemons qui est un objet de type json:contient 12 tableaux   -->
+  
